@@ -17,13 +17,107 @@
         </div>
         
         <!-- App Title -->
-        <h1 class="app-title">TeleCoin</h1>
+        <h1 class="app-title">Free Email & Password</h1>
         
         <!-- Description -->
-        <p class="description">Start Earning Tele Coin</p>
+        <p class="description">free with games and apps</p>
     
         <!-- Wide Button (Primary CTA) -->
-        <a href="newpage.html" class="btn btn-wide">Start Now</a>
+        <style>
+.apple-table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+.apple-table .apple-table-data, .apple-table .apple-table-header {
+  border: 2px solid #01a3ff;
+  text-align: left;
+  padding: 8px;
+}
+.apple-table tr:nth-child(even) {
+  background-color: #dddddd;
+}
+button {
+  margin-top: 5px;
+  padding: 5px 10px;
+  color: white;
+  background-color: #007BFF;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+button:hover {
+  background-color: #0056b3;
+}
+@media only screen and (max-width: 680px) {
+    .post-body table {
+        display: table;
+      
+    }
+}
+</style>
+
+<br />
+<h2 style="text-align: center;"><span style="color: red;">🍎🆔 Free Apple ID Here 🍎🆔</span></h2><div><span style="color: red;"><br /></span></div>
+<table class="apple-table">
+  <tbody>
+    <tr>
+      <th class="apple-table-header">Apple ID Email</th>
+      <th class="apple-table-header">Password</th>
+    </tr>
+    <tr>
+      <td class="apple-table-data" id="email">
+        ahmetkara727r@gmail.com
+        <br />
+        <button onclick="copyToClipboard('email')">Copy Email</button>
+      </td>
+      <td class="apple-table-data" id="password">
+        <span id="hiddenPassword">********</span>
+        <br />
+        <button id="showPasswordBtn" onclick="showPassword()">Show Password (10s)</button>
+        <button id="copyPasswordBtn" onclick="copyToClipboard('password')" style="display: none;">Copy Password</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<br />
+<h4 style="text-align: center;"><span style="color: #04ff00; font-weight: normal;"><a href="https://t.ly/eBM4S" target="_blank">Request unlock apple id 🔓🍎🆔</a></span></h4>
+
+<script>
+const passwordText = "D7)t.me/ipeachoa"; // Place password 🔓
+
+function copyToClipboard(id) {
+  const text = document.getElementById(id).innerText.split('\n')[0].trim(); // Extract text before newline
+  navigator.clipboard.writeText(text).then(() => {
+    alert(`${id === 'email' ? 'Email' : 'Password'} copied to clipboard!`);
+  }).catch(err => {
+    console.error('Error copying text: ', err);
+  });
+}
+
+function showPassword() {
+  const hiddenPassword = document.getElementById('hiddenPassword');
+  const showPasswordBtn = document.getElementById('showPasswordBtn');
+  const copyPasswordBtn = document.getElementById('copyPasswordBtn');
+
+  let countdown = 10; // Initialize countdown value
+  showPasswordBtn.disabled = true; // Disable the button
+  showPasswordBtn.innerText = `Please wait ${countdown}s...`;
+
+  const timer = setInterval(() => {
+    countdown--;
+    if (countdown > 0) {
+      showPasswordBtn.innerText = `Please wait ${countdown}s...`;
+    } else {
+      clearInterval(timer); // Stop the timer
+      hiddenPassword.innerText = passwordText; // Reveal the password
+      showPasswordBtn.style.display = 'none'; // Hide the "Show Password" button
+      copyPasswordBtn.style.display = 'inline-block'; // Show the "Copy Password" button
+    }
+  }, 1000); // Update every second
+}
+</script>
+<div id="gtx-trans" style="left: 468px; position: absolute; top: 239.625px;"><div class="gtx-trans-icon"></div></div>
       </div>
 </body>
 </html>
